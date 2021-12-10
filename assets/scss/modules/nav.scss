@@ -1,6 +1,7 @@
 .nav {
   &-list {
     display: flex;
+    align-items: center;
   }
 
   &-item {
@@ -43,8 +44,29 @@
 
   &-link {
   }
+  .saved{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/icons/saved.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .notifications{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/icons/notifications.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
-
+.user-page .nav-item{
+  margin: 0 12px;
+  &:nth-last-child(1){
+    margin-right: 0;
+  }
+}
 .menu__icons {
   display: none;
   width: 25px;

@@ -95,4 +95,23 @@ $(function () {
            }
        }
     })
+
+    $(".modal .modal__container").on("click", function (e) {
+        e.stopPropagation();
+    });
+    $(".modal .close, .modal ").on("click", function (e) {
+        e.preventDefault();
+        $(".modal").fadeOut(function () {
+            $("body").css("overflow", "auto");
+            $('header').css('visibility', 'unset')
+
+        });
+    });
+    $(".open__modal").on("click", function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var modal = $this.attr('data-modal');
+        $("body").css("overflow", "hidden");
+        $(`${modal}`).fadeIn();
+    });
 })

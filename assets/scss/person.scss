@@ -49,24 +49,21 @@ button {
     background: #1698d0;
     border: 1px solid #1698d0;
   }
-
-  &-border {
+  &-border{
     background: transparent;
-    color: #53B7E8;
+    color:#53B7E8;
   }
 }
-
-label {
+label{
   cursor: pointer;
 }
-
 // Modules (большие куски. Шапка, футер, продукт)
 @import "modules/header";
 @import "modules/nav";
 @import "modules/footer";
 
 // Pages (стили, котрые нужно применить для конкретной страницы)
-@import "pages/landing";
+@import "pages/user-page";
 *, body {
   font-family: 'Noto Sans Armenian', 'Roboto';
   font-weight: 500;
@@ -85,12 +82,11 @@ label {
   line-height: 40px;
 }
 
-.sub-title {
+.sub-title{
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
 }
-
 .description {
   font-size: 20px;
   line-height: 28px;
@@ -145,9 +141,7 @@ label {
   }
 }
 
-span.number {
-  color: $white;
-}
+
 
 .select {
   max-width: 400px;
@@ -212,20 +206,7 @@ span.number {
   }
 }
 
-.select2-search__field {
-  position: relative;
-  width: 100% !important;
 
-  &::before {
-    content: 'Ընտրեք ոլորտները';
-    position: absolute;
-
-  }
-}
-
-.select2-selection__rendered {
-  //display: none !important;
-}
 
 .new-select {
   border: 2px solid #000000;
@@ -264,8 +245,7 @@ span.number {
     position: relative;
     z-index: 3;
   }
-
-  &-bg {
+  &-bg{
     width: 100%;
     height: 100%;
     position: fixed;
@@ -294,9 +274,8 @@ span.number {
     padding: 8px 5px;
     color: #000000;
     cursor: pointer;
-
     &:hover,
-    &.active {
+    &.active{
       text-decoration: underline;
     }
   }
@@ -305,19 +284,13 @@ span.number {
     &::before {
       transform: translateY(-50%) rotate(180deg);
     }
-
-    .new-select-list {
+    .new-select-list{
       display: block;
 
     }
-
-    .new-select-bg {
+    .new-select-bg{
       display: block;
     }
   }
 
-}
-
-.d-flex {
-  display: flex;
 }

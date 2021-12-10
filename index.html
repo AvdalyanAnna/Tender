@@ -31,7 +31,7 @@
                         <a href="#" class="nav-link">Նյութեր</a>
                     </li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link nav-login">Մուտք</a>
+                        <a href="#" data-modal="#login" class="nav-link nav-login open__modal">Մուտք</a>
                     </li>
                 </ul>
             </nav>
@@ -50,7 +50,7 @@
             <div class="one-section__left">
                 <h1>Համակարգը տենդերների միջոցով գնումներ և վաճառքներ կատարելու հարթակ է։
                     Այստեղ առկա են տենդերների վերաբերյալ տեղեկատվական և ավտոմատացման տարբեր գործիքներ։ </h1>
-                <button class="btn">Գրանցվել</button>
+                <button class="btn open__modal" data-modal="#registration">Գրանցվել</button>
             </div>
             <div class="one-section__right">
                 <img src="assets/images/one-section-img.png" alt="one-section-image">
@@ -425,6 +425,98 @@
         </div>
     </div>
 </footer>
+
+<div id="login" class="modal">
+    <div class="modal__container">
+        <div class="close"></div>
+        <h2 class="sub-title">Մուտք անձնական էջ</h2>
+        <form action="#" class="modal-form">
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="email" name="email" placeholder="Գրեք էլ-հասցեն">
+                <label for="email">Էլ-հասցե</label>
+            </div>
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="password" name="password" placeholder="Գրեք գաղտնաբառը">
+                <label for="password">Գաղտնաբառ </label>
+            </div>
+            <div class="modal-form__more">
+                <div class="input-checkbox">
+                    <input type="checkbox" id="checkbox" name="checkbox" checked>
+                    <label for="checkbox"> Հիշել ինձ </label>
+                </div>
+                <a href="#" class="remove open__modal" data-modal="#modal_remove">Մորացե՞լ եք գաղտնաբառը</a>
+            </div>
+            <button class="btn">Մուտք</button>
+            <button class="btn btn-border">Գրանցվել</button>
+        </form>
+    </div>
+</div>
+
+<div id="modal_remove" class="modal">
+    <div class="modal__container">
+        <div class="close"></div>
+        <h2 class="sub-title">Մուտք անձնական  էջ</h2>
+        <form action="#" class="modal-form">
+            <div class="description">
+                Եթե մոռացել եք Ձեր գաղտնաբառը, ապա մուտքագրեք Ձեր էլ. փոստի հասցեն և սեղմեք «Վերականգնել»: Դրանից հետո կստանաք նամակ, որում ներառված հղումը սեղմելով կարող եք շարունակել գաղտնաբառի վերականգնումը
+            </div>
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="email2" name="email" placeholder="Գրեք էլ-հասցեն">
+                <label for="email2">Էլ-հասցե</label>
+            </div>
+            <button class="btn">Վերականգնել</button>
+        </form>
+    </div>
+</div>
+<div id="new_password" class="modal">
+    <div class="modal__container">
+        <div class="close"></div>
+        <h2 class="sub-title">Նոր գաղտնաբառ</h2>
+        <form action="#" class="modal-form">
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="password3" name="password" placeholder="Գրեք գաղտնաբառը">
+                <label for="password3">Գաղտնաբառ </label>
+            </div>
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="password4" name="password1" placeholder="Գրեք գաղտնաբառը">
+                <label for="password4">Կրկնեք գաղտնաբառը </label>
+            </div>
+            <button class="btn">Գրանցվել</button>
+        </form>
+    </div>
+</div>
+
+<div id="registration" class="modal">
+    <div class="modal__container">
+        <div class="close"></div>
+        <h2 class="sub-title">Գրանցվել</h2>
+        <form action="#" class="modal-form">
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="email1" name="email" placeholder="Գրեք էլ-հասցեն">
+                <label for="email1">Էլ-հասցե</label>
+            </div>
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="phone" name="phone" placeholder="+374 __ __ __ __">
+                <label for="phone">Հեռախոսահամար </label>
+            </div>
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="password1" name="password" placeholder="Գրեք գաղտնաբառը">
+                <label for="password1">Գաղտնաբառ </label>
+            </div>
+            <div class="input-group input-group-active input-group-now">
+                <input type="text" id="password2" name="password1" placeholder="Գրեք գաղտնաբառը">
+                <label for="password2">Կրկնեք գաղտնաբառը </label>
+            </div>
+            <div class="modal-form__more">
+                <div class="input-checkbox">
+                    <input type="checkbox" id="checkbox1" name="checkbox" checked>
+                    <label for="checkbox1"> Ես համաձայն եմ  օգտատիրոջ <span>տվյալների մշակման քաղաքականության</span> հետ: </label>
+                </div>
+            </div>
+            <button class="btn">Գրանցվել</button>
+        </form>
+    </div>
+</div>
 
 <script src="assets/js/vendor/jquery-3.6.0.js"></script>
 <script src="assets/js/vendor/slick.min.js"></script>
