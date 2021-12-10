@@ -1,0 +1,28 @@
+.nav-list {
+  display: flex; }
+.nav-item {
+  margin: 0 20px;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer; }
+  .nav-item:nth-child(1) {
+    margin-left: 0; }
+  .nav-item:nth-last-child(1) {
+    margin-right: 0; }
+.nav-login {
+  padding-right: 28px;
+  position: relative;
+  font-weight: 600; }
+  .nav-login::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: -3px;
+    top: -2px;
+    background-image: url(../images/icons/user.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+
+/*# sourceMappingURL=nav.css.map */
