@@ -5,6 +5,8 @@
 // Vendor (Вендорные стили. Например от плагинов)
 @import "vendor/slick";
 @import "vendor/jquery.formstyler.css";
+@import "vendor/daterangepicker";
+
 // Common (основные стили.)
 @import "common/default";
 //@import "common/fonts";
@@ -49,14 +51,44 @@ button {
     background: #1698d0;
     border: 1px solid #1698d0;
   }
-  &-border{
+
+  &-border {
     background: transparent;
-    color:#53B7E8;
+    color: #53B7E8;
+  }
+
+  &-filter {
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    background: transparent;
+    color: $blue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: unset;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/icons/filter.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 0;
+    }
   }
 }
-label{
+
+
+label {
   cursor: pointer;
 }
+
 // Modules (большие куски. Шапка, футер, продукт)
 @import "modules/header";
 @import "modules/nav";
@@ -82,11 +114,22 @@ label{
   line-height: 40px;
 }
 
-.sub-title{
+.sub-title {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
 }
+
+.sub-title-2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 16px 0;
+  b{
+    font-weight: 600;
+  }
+}
+
 .description {
   font-size: 20px;
   line-height: 28px;
@@ -142,7 +185,6 @@ label{
 }
 
 
-
 .select {
   max-width: 400px;
   width: 100%;
@@ -189,6 +231,120 @@ label{
   }
 }
 
+.input-checkbox {
+  width: fit-content;
+  margin: 14px 0;
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 30px;
+    position: relative;
+
+    span {
+      color: #53B7E8;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #53B7E8;
+      box-sizing: border-box;
+      border-radius: 4px;
+      left: 0;
+    }
+
+  }
+
+  input:checked + label {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/checkbox.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 1px;
+      top: 0;
+    }
+  }
+}
+.input-group {
+  position: relative;
+  margin: 25px 0;
+
+  input {
+    padding: 0px 20px;
+    margin: 10px 0px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(26, 72, 96, 0.38);
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1A4860;
+    outline: none;
+
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+    font-size: 18px;
+    line-height: 19px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-active {
+    input {
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.0015em;
+      margin: 0px 2px;
+      top: 0;
+      min-height: auto;
+      width: fit-content;
+      background: $white;
+      padding: 0 3px;
+      left: 7px;
+    }
+  }
+
+  &-now {
+    input {
+      border-color: #53B7E8;
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   .btn {
@@ -205,7 +361,6 @@ label{
     line-height: 20px;
   }
 }
-
 
 
 .new-select {
@@ -245,7 +400,8 @@ label{
     position: relative;
     z-index: 3;
   }
-  &-bg{
+
+  &-bg {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -274,8 +430,9 @@ label{
     padding: 8px 5px;
     color: #000000;
     cursor: pointer;
+
     &:hover,
-    &.active{
+    &.active {
       text-decoration: underline;
     }
   }
@@ -284,13 +441,88 @@ label{
     &::before {
       transform: translateY(-50%) rotate(180deg);
     }
-    .new-select-list{
+
+    .new-select-list {
       display: block;
 
     }
-    .new-select-bg{
+
+    .new-select-bg {
       display: block;
     }
   }
 
+  &_main-filter {
+    border-color: rgba($blue, 0.5);
+    height: 40px;
+    width: 240px;
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__item {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    cursor: pointer;
+
+    &.active {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
+  &__prev {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: rotate(180deg);
+      background-image: url('../images/slider/slider-arrow-left.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__next {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/slider/slider-arrow-left.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
 }

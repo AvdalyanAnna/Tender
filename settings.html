@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tender</title>
+    <link rel="stylesheet" href="assets/scss/person.css">
+</head>
+<body class="user-page">
+<header class="header">
+    <div class="header-top"></div>
+    <div class="wrapper">
+        <div class="header-inner">
+            <a href="#" class="header-logo logo">
+                <img src="assets/images/logo.png" alt="logo">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link nav-login ">Անուն Ազգանուն</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="person-saved.html" class="saved"></a>
+                    </li>
+                    <li class="nav-item ">
+                        <span class="notifications"></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu__icons">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="wrapper">
+        <div class="main-inner">
+            <div class="sidebar">
+                <div class="user-name sub-title">Անձնական էջ</div>
+                <div class="sidebar__list">
+                    <a href="person.html" class="sidebar__item sidebar__item-1">
+                        <div class="icon"></div>
+                        Գնման մրցույթներ
+                    </a>
+                    <a href="person-report.html" class="sidebar__item sidebar__item-2">
+                        <div class="icon"></div>
+                        Հաշվետվություն
+                    </a>
+                    <a href="settings.html" class="sidebar__item sidebar__item-3 active">
+                        <div class="icon"></div>
+                        Կարգաորումներ
+                    </a>
+                    <a href="#" class="sidebar__item sidebar__item-4">
+                        <div class="icon"></div>
+                        Անձնական տվյալներ
+                    </a>
+                    <a href="#" class="sidebar__item sidebar__item-5">
+                        <div class="icon"></div>
+                        Դուրս գալ
+                    </a>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="setting">
+                    <div class="setting-item">
+                        <div class="setting-header">
+                            <div class="sub-title-2">Փաթեթ՝<b> Basic</b></div>
+                            <div class="text-right">Ակտիվ է մինչ՝<b> 22.02.2022</b></div>
+                        </div>
+
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="checkbox" name="checkbox" checked>
+                            <label for="checkbox">Պետական գնումներ</label>
+                        </div>
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="checkbox1" name="checkbox">
+                            <label for="checkbox1">Մասնաոր գնումներ</label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="sub-title-2">Ընտրված ոլորտներ</div>
+                        <div class="main-filter__res-list">
+                            <div class="main-filter__res-item">Գրենական պիտույքներ</div>
+                            <div class="main-filter__res-item">Շինարարություն</div>
+                        </div>
+                        <div class="new-select new-select_main-filter">
+                            <div class="new-select-bg"></div>
+                            <div class="new-select-title">Ընտրեք ոլորտները</div>
+                            <div class="new-select-list">
+                                <div class="new-select-item active">Գրենական պիտույքներ</div>
+                                <div class="new-select-item active">Շինարարություն</div>
+                                <div class="new-select-item">Գրենական պիտույքներ 1</div>
+                                <div class="new-select-item">Շինարարություն 1</div>
+                            </div>
+                        </div>
+                        <span class="green">*Յուրաքանչուր ոլորտի ընտրությունը արժե՝ 30 000֏</span>
+                    </div>
+                    <div class="setting-item">
+                        <div class="sub-title-2">Գործունեության հասցէ</div>
+                        <div class="input-group input-group-active input-group-now">
+                            <input type="text" id="coordinate" name="coordinate" value="Երևան․ Աբովյան 45" placeholder="հասցէ">
+                            <label for="coordinate">Գործունեության հասցէ </label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="sub-title-2">Մատակարարման վայր</div>
+                        <div class="input-group input-group-active input-group-now">
+                            <input type="text" id="coordinate1" name="coordinate1" value="Բոլորը" placeholder="Բոլորը">
+                            <label for="coordinate1">Հեռավորությունը ըստ շառավղի</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sub-title-2">Ամսվա վճարը արժե՝ <b>60 000֏</b></div>
+                <button class="btn">Անցնել վճարման</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__inner">
+            <div class="footer__list">
+                <div class="footer__item">
+                    <div class="footer__title">Կապ մեզ հետ</div>
+                    <ul>
+                        <li>
+                            <a class="email" target="_blank" href="mailto:info@kmg.am">info@kmg.am</a>
+                        </li>
+                        <li>
+                            <a class="phone" target="_blank" href="tel:+3741058158">+374 (10) 58 19 58</a>
+                        </li>
+                        <li>
+                            <a class="phone" target="_blank" href="tel:+37499130099">+374 (99) 13 00 99</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__title">Հետեվիր մեզ</div>
+                    <ul>
+                        <li>
+                            <a class="youtube" target="_blank" href="https://www.youtube.com/">Youtube</a>
+                        </li>
+                        <li>
+                            <a class="facebook" target="_blank" href="https://www.facebook.com/">Facebook</a>
+                        </li>
+                        <li>
+                            <a class="linkedin" target="_blank"
+                               href="https://www.linkedin.com/posts/scottdresden_shortcut-learning-in-deep-neural-networks-activity-6736988008546922496-7yg2">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__title">Հասցե</div>
+                    <ul>
+                        <li>
+                            <a class="map" href="#">ք. Երևան, Աբովյան փողոց, շենք 41, թիվ 5</a>
+                        </li>
+                    </ul>
+                    <div id="map">
+                    </div>
+                </div>
+            </div>
+            <div class="footer__info">
+                © <span class="number">2022</span> «ՔԵՅԷՄՋԻ ՔՈՆՍԱԼԹԻՆԳ» ՍՊԸ|Բոլոր իրավունքները պաշտպանված են:
+                Կայքում տեղադրված նյութերը պատկանում են «ՔԵՅԷՄՋԻ ՔՈՆՍԱԼԹԻՆԳ» ՍՊԸ-ին:
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="assets/js/vendor/jquery-3.6.0.js"></script>
+<script src="assets/js/vendor/slick.min.js"></script>
+<script src="assets/js/vendor/jquery.canvasjs.min.js"></script>
+<script src="assets/js/vendor/jquery.formstyler.min.js"></script>
+<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

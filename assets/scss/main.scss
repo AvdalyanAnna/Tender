@@ -54,6 +54,28 @@ button {
     background: transparent;
     color: #53B7E8;
   }
+
+  &-filter {
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    background: transparent;
+    color: $blue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/icons/filter.svg);
+      left: 0;
+    }
+  }
 }
 
 label {
@@ -191,6 +213,120 @@ span.number {
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+}
+.input-checkbox {
+  width: fit-content;
+
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 30px;
+    position: relative;
+
+    span {
+      color: #53B7E8;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #53B7E8;
+      box-sizing: border-box;
+      border-radius: 4px;
+      left: 0;
+    }
+
+  }
+
+  input:checked + label {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/checkbox.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 1px;
+      top: 0;
+    }
+  }
+}
+.input-group {
+  position: relative;
+  margin: 25px 0;
+
+  input {
+    padding: 0px 20px;
+    margin: 10px 0px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(26, 72, 96, 0.38);
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1A4860;
+    outline: none;
+
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+    font-size: 18px;
+    line-height: 19px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-active {
+    input {
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.0015em;
+      margin: 0px 2px;
+      top: 0;
+      min-height: auto;
+      width: fit-content;
+      background: $white;
+      padding: 0 3px;
+      left: 7px;
+    }
+  }
+
+  &-now {
+    input {
+      border-color: #53B7E8;
     }
   }
 }

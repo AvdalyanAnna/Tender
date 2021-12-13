@@ -10,7 +10,8 @@
     line-height: 20px;
     cursor: pointer;
     @include prefix-name(transition, text-decoration 0.3 ease);
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
 
@@ -44,29 +45,18 @@
 
   &-link {
   }
-  .saved{
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url("../images/icons/saved.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .notifications{
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url("../images/icons/notifications.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+
+
 }
-.user-page .nav-item{
+
+.user-page .nav-item {
   margin: 0 12px;
-  &:nth-last-child(1){
+
+  &:nth-last-child(1) {
     margin-right: 0;
   }
 }
+
 .menu__icons {
   display: none;
   width: 25px;
@@ -108,6 +98,43 @@
   }
 }
 
+.saved {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/saved.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &.active {
+    background-image: url("../images/icons/saved-active.svg");
+  }
+}
+.notifications {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/notifications.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover,
+  &.active {
+    background-image: url("../images/icons/notifications-active.svg");
+  }
+  &.has-notifications{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #FB2424;
+      border-radius: 50%;
+      right: 0;
+    }
+  }
+}
 @media screen and (max-width: 900px) {
   .nav {
     .nav-list {
@@ -126,6 +153,7 @@
       padding: 0 10px;
       box-sizing: border-box;
     }
+
     &.active {
       display: block;
 
