@@ -13,7 +13,7 @@
     <div class="header-top"></div>
     <div class="wrapper">
         <div class="header-inner">
-            <a href="#" class="header-logo logo">
+            <a href="/" class="header-logo logo">
                 <img src="assets/images/logo.png" alt="logo">
             </a>
             <nav class="nav">
@@ -43,7 +43,7 @@
             <div class="sidebar">
                 <div class="user-name sub-title">Անձնական էջ</div>
                 <div class="sidebar__list">
-                    <a  href="person.html" class="sidebar__item sidebar__item-1 active">
+                    <a href="person.html" class="sidebar__item sidebar__item-1">
                         <div class="icon"></div>
                         Գնման մրցույթներ
                     </a>
@@ -55,7 +55,7 @@
                         <div class="icon"></div>
                         Կարգաորումներ
                     </a>
-                    <a href="#" class="sidebar__item sidebar__item-4">
+                    <a href="#" class="sidebar__item sidebar__item-4 active">
                         <div class="icon"></div>
                         Անձնական տվյալներ
                     </a>
@@ -66,8 +66,78 @@
                 </div>
             </div>
             <div class="main-content">
+
+                <div class="user-settings">
+                    <div class="user-settings-header">
+                        <div class="user-settings-header__item active">Անձնական տվյալներ</div>
+                        <div class="user-settings-header__item">Փոխել գաղտնաբառը</div>
+                    </div>
+                    <div  class="user-settings-item" >
+                        <div class="input-radio-group">
+                            <div class="input-radio-inner">
+                                <div class="input-radio">
+                                    <input type="radio" id="fz" name="group" checked>
+                                    <label for="fz">Ֆիզիկական անձ</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="noFz" name="group">
+                                    <label for="noFz">Իրավաբանական անձ (ԱՁ, ՍՊԸ)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group input-group-active">
+                            <input type="text" id="name" name="name" value="Պողոսյան">
+                            <label for="name">Անուն </label>
+                        </div>
+                        <div class="input-group input-group-active">
+                            <input type="text" id="surname" name="surname" value="Պողոս">
+                            <label for="surname">Ազգանուն </label>
+                        </div>
+                        <div class="input-group input-group-active">
+                            <input type="text" id="email" name="email" value="Էլ-հասցե">
+                            <label for="email">Պողոսյան </label>
+                        </div>
+                        <div class="input-group input-group-active">
+                            <input type="text" id="phone" class="phone-mask" name="phone" value="+374 55 55 55 55">
+                            <label for="phone">Հեռախոսահամար </label>
+                        </div>
+                        <div class="user-settings-file">
+                            <label class="download-file"> <input type="file"> Կցել ֆայլ</label>
+                            <div>
+                                <label class="download-pdf"> <input type="file">Տեխ․ բնութագիր</label>
+                                <label class="download-doc"> <input type="file">Ծավալաթերթ</label>
+                            </div>
+                            <label class="download-contract"> <input type="file">Բեռնել պայմանագրի օրինակը</label>
+                        </div>
+                        <div class="buttons-group">
+                            <button class="btn">Պահպանել</button>
+                            <button class="btn btn-transparent">չեղարկել</button>
+                        </div>
+                    </div>
+                    <div style="display: none;" class="user-settings-item">
+                        <div class="input-radio-group">
+                        <div class="input-group">
+                            <input type="text" id="pass" name="pass" placeholder="Գրեք հին գաղտնաբառը">
+                            <label for="pass">Հին գաղտնաբառ </label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="pass1" name="pass1" placeholder="Գրեք նոր գաղտնաբառը">
+                            <label for="pass1">Նոր գաղտնաբառ </label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="pass2" name="pass2" placeholder="Կրկնեք գաղտնաբառը">
+                            <label for="pass2">Կրկնեք գաղտնաբառը </label>
+                        </div>
+                        <div class="buttons-group">
+                            <button class="btn">Պահպանել</button>
+                            <button class="btn btn-transparent">չեղարկել</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 </main>
 
@@ -129,6 +199,7 @@
 <script src="assets/js/vendor/slick.min.js"></script>
 <script src="assets/js/vendor/jquery.canvasjs.min.js"></script>
 <script src="assets/js/vendor/jquery.formstyler.min.js"></script>
+<script src="assets/js/vendor/jquery.mask.min.js"></script>
 <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
 <script src="assets/js/main.js"></script>
 </body>

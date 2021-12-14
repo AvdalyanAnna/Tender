@@ -96,6 +96,7 @@ $(function () {
         ymaps.ready(init_map_center);
     }
 
+
     function init_map_center() {
         myMap = new ymaps.Map("map", {
             center: [40.184829, 44.520182],
@@ -118,19 +119,37 @@ $(function () {
     $('.new-select-bg').on('click', function () {
         $(this).parent('.new-select').removeClass('new-select-active')
     })
-    $('.new-select-item').on('click', function () {
-        $(this).toggleClass('active')
-        if ($(this).hasClass('active')) {
-            let html = `<div class="price__item-check">${$(this).html()}</div>`
-            $(this).parents('.price__inner').children('.price__item-checks').append(html)
-        } else {
-            let priceItem = $(this).parents('.price__inner').children('.price__item-checks').children()
-            for (let i = 0; i < priceItem.length; i++) {
-                if ($(this).html() === priceItem.eq(i).text()) {
-                    priceItem.eq(i).remove()
+    $('.new-select-item .input-checkbox input').on('change', function () {
+        var $this = $(this)
+        var label = $this.parent().children('label').text()
+        console.log($('.main-filter__res-list').children('.main-filter__res-item').children())
+        if($this.parents('.new-select_main-filter')){
+            if ($this.is(":checked")) {
+                let html = `<div class="main-filter__res-item">${label}</div>`
+                $('.main-filter__res-list').append(html)
+            } else {
+                let priceItem = $('.main-filter__res-list').children('.main-filter__res-item')
+                for (let i = 0; i < priceItem.length; i++) {
+                    if (label === priceItem.eq(i).text().trim()) {
+                        priceItem.eq(i).remove()
+                    }
+                }
+            }
+        }else{
+            console.log(2)
+            if ($this.is(":checked")) {
+                let html = `<div class="price__item-check">${label}</div>`
+                $(this).parents('.price__inner').children('.price__item-checks').append(html)
+            } else {
+                let priceItem = $(this).parents('.price__inner').children('.price__item-checks').children()
+                for (let i = 0; i < priceItem.length; i++) {
+                    if (label === priceItem.eq(i).text().trim()) {
+                        priceItem.eq(i).remove()
+                    }
                 }
             }
         }
+
     })
 
     $(".modal .modal__container").on("click", function (e) {
@@ -141,7 +160,6 @@ $(function () {
         $(".modal").fadeOut(function () {
             $("body").css("overflow", "auto");
             $('header').css('visibility', 'unset')
-
         });
     });
     $(".open__modal").on("click", function (e) {
@@ -151,4 +169,33 @@ $(function () {
         $("body").css("overflow", "hidden");
         $(`${modal}`).fadeIn();
     });
+
+    $('.user-settings-header__item').on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        if (!$this.hasClass('active')) {
+            $('.user-settings-header__item').removeClass('active')
+            $this.addClass('active')
+            $('.user-settings-item').fadeToggle()
+        }
+    })
+
+    $('.input-group input').focus( function () {
+        var $this = $(this);
+        $this.parent().addClass('input-group-active')
+        $this.parent().addClass('input-group-now')
+    })
+
+    $('.input-group input').on('blur', function () {
+        var $this = $(this);
+        $this.parent().removeClass('input-group-now')
+
+        if ($this.val() === '') {
+           $this.parent().removeClass('input-group-active')
+        }
+    })
+
+    if ($('input').is('.phone-mask')) {
+        $('.phone-mask').mask("+374 00 00 00 00", {placeholder: "+374 __ __ __ __"})
+    }
 })

@@ -1,9 +1,8 @@
 .one-section {
   margin-top: 88px;
   box-sizing: border-box;
-  height: calc(100vh - 88px);
-  min-height: calc(824px - 88px);
-  background-image: url(../images/one-section-bg.png);
+  height: 800px;
+  background-image: url(/assets/images/one-section-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -50,7 +49,7 @@
 }
 
 .our-works {
-  margin: 181px 0;
+  margin: 181px 0 0;
 
   &__list {
     display: flex;
@@ -92,6 +91,7 @@
 }
 
 .charts {
+  padding: 140px 0 109px;
   min-height: 450px;
 
   .canvasjs-chart-credit {
@@ -113,10 +113,15 @@
     label {
       font-size: 20px;
       line-height: 32px;
+      margin-bottom: 21px;
     }
 
-    .select {
-      margin: 21px 0 51px;
+    .btn {
+      margin-top: 52px;
+    }
+    .new-select {
+      max-width: 400px;
+      width: 100%;
     }
   }
 
@@ -142,7 +147,7 @@
 .join-us {
   padding: 40px 0 80px;
   box-sizing: border-box;
-  background-image: url(../images/join-us-bg.png);
+  background-image: url(/assets/images/join-us-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -248,7 +253,7 @@
 
 .price {
   &-block {
-    margin: 180px 0;
+    padding: 180px 0 0;
   }
 
   &__list {
@@ -394,6 +399,8 @@
       color: #53B7E8;
     }
 
+
+
     .select {
       margin: 4px 0 7px;
       border: 2px solid $black;
@@ -419,7 +426,7 @@
 
 
 .about-us {
-  margin: 115px 0;
+  padding: 140px 0 0;
 
   .description {
     margin: 39px 0 27px;
@@ -498,7 +505,7 @@
 }
 
 .news {
-  margin: 138px 0 107px;
+  padding: 138px 0 107px;
 
   &-slider {
     .news-slider__item {
@@ -567,6 +574,31 @@
     line-height: 20px;
   }
 
+}
+.slider {
+  padding: 56px 0;
+  position: relative;
+
+  .slick-arrow {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: transparent;
+    background-image: url('/assets/images/slider/slider-arrow-left.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    right: 56px;
+    background-image: url('/assets/images/slider/slider-arrow-right.svg');
+  }
 }
 
 @media screen and (max-width: 1065px) {
@@ -758,7 +790,7 @@
     }
   }
   .about-us {
-    margin: 75px 0;
+    padding: 75px 0;
 
     &__inner {
       flex-wrap: wrap;
@@ -791,7 +823,7 @@
     }
   }
   .news {
-    margin: 75px 0;
+    padding: 75px 0;
 
     &-slider {
       .news-slider__item {
@@ -816,88 +848,14 @@
       margin-top: 20px;
     }
   }
-}
-
-.modal {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  overflow: auto;
-  box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 5;
-
-  &__container {
-    width: 616px;
-    min-height: 250px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include prefix-name(transform, translate(-50%, -50%));
-    background: $white;
-    border-radius: 4px;
-    padding: 64px;
-    box-shadow: 0px -2px 30px #DADADA;
-    margin: 10px auto;
-    box-sizing: border-box;
+  .news,
+  .charts{
+    padding: 0;
   }
-
-  .close {
-    position: fixed;
-    right: 12px;
-    top: 10px;
-    z-index: 7;
-    width: 100%;
-    height: 52px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: url("../images/icons/close.svg") no-repeat center center;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      @include prefix-name(transform, translateY(-50%));
-
-      cursor: pointer;
-    }
-  }
-
-  &-form {
-    margin: 40px 0 0;
-
-    .description {
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-    .btn {
-      width: 100%;
-      margin: 8px 0;
-
-      &:nth-last-child(1) {
-        margin-bottom: 0;
-      }
-    }
-
-    &__more {
-      display: flex;
-      justify-content: space-between;
-      margin: -7px 0 24px;
-
-      .remove {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 20px;
-      }
-    }
+  .price-block {
+    padding: 80px 0 0;
   }
 }
+
 
 

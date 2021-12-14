@@ -13,22 +13,22 @@
     <div class="header-top"></div>
     <div class="wrapper">
         <div class="header-inner">
-            <a href="#" class="header-logo logo">
+            <a href="/" class="header-logo logo">
                 <img src="assets/images/logo.png" alt="logo">
             </a>
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Տենդերներ</a>
+                        <a href="#charts" class="nav-link">Տենդերներ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Ծառայության փաթեթներ</a>
+                        <a href="#price-block" class="nav-link">Ծառայության փաթեթներ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Մեր մասին</a>
+                        <a href="#about-us" class="nav-link">Մեր մասին</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Նյութեր</a>
+                        <a href="#news" class="nav-link">Նյութեր</a>
                     </li>
                     <li class="nav-item ">
                         <a href="#" data-modal="#login" class="nav-link nav-login open__modal">Մուտք</a>
@@ -95,18 +95,44 @@
     </div>
 </section>
 
-<section class="charts">
+<section class="charts" id="charts">
     <div class="wrapper">
         <h2 class="title">Տենդերների վիճակագրություն </h2>
         <div class="charts-inner">
             <div class="charts-left">
-                <label for="charts-select"> Ընտրել ոլորտը </label>
-                <select name="" id="charts-select" class="select">
-                    <option> Բոլորը</option>
-                    <option> Բոլորը 1</option>
-                    <option> Բոլորը 2</option>
-                    <option> Բոլորը 3</option>
-                </select>
+                <label > Ընտրել ոլորտը </label>
+                <div class="new-select">
+                    <div class="new-select-bg"></div>
+                    <div class="new-select-title">Ընտրեք ոլորտները</div>
+                    <div class="new-select-list">
+                        <div class="new-select-item">
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="checkbox10" checked>
+                                <label for="checkbox10">Գրենական պիտույքներ</label>
+                            </div>
+                        </div>
+                        <div class="new-select-item">
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="checkbox11" checked>
+                                <label for="checkbox11">Շինարարություն</label>
+                            </div>
+                        </div>
+                        <div class="new-select-item">
+
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="checkbox12">
+                                <label for="checkbox12">Գրենական պիտույքներ 1</label>
+                            </div>
+                        </div>
+                        <div class="new-select-item">
+
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="checkbox13">
+                                <label for="checkbox13">Շինարարություն 1</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <button class="btn">տեսնել ավելին</button>
             </div>
             <div class="charts-right">
@@ -156,7 +182,7 @@
     </div>
 </section>
 
-<section class="price-block">
+<section class="price-block" id="price-block">
     <div class="wrapper">
         <h2 class="title">Ծառայության փաթեթներ</h2>
         <div class="price__list">
@@ -168,10 +194,32 @@
                         <div class="new-select-bg"></div>
                         <div class="new-select-title">Ընտրեք ոլորտները</div>
                         <div class="new-select-list">
-                            <div class="new-select-item active">Գրենական պիտույքներ</div>
-                            <div class="new-select-item active">Շինարարություն</div>
-                            <div class="new-select-item">Գրենական պիտույքներ 1</div>
-                            <div class="new-select-item">Շինարարություն 1</div>
+                            <div class="new-select-item">
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox6" checked>
+                                    <label for="checkbox6">Գրենական պիտույքներ</label>
+                                </div>
+                            </div>
+                            <div class="new-select-item">
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox7" checked>
+                                    <label for="checkbox7">Շինարարություն</label>
+                                </div>
+                            </div>
+                            <div class="new-select-item">
+
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox8">
+                                    <label for="checkbox8">Գրենական պիտույքներ 1</label>
+                                </div>
+                            </div>
+                            <div class="new-select-item">
+
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox9">
+                                    <label for="checkbox9">Շինարարություն 1</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <span>*1-ից ավել ոլորտ ընտրելու դեպքում ստացեք 20% զեղչ</span>
@@ -195,10 +243,32 @@
                         <div class="new-select-bg"></div>
                         <div class="new-select-title">Ընտրեք ոլորտները</div>
                         <div class="new-select-list">
-                            <div class="new-select-item active">Գրենական պիտույքներ</div>
-                            <div class="new-select-item active">Շինարարություն</div>
-                            <div class="new-select-item">Գրենական պիտույքներ 1</div>
-                            <div class="new-select-item">Շինարարություն 1</div>
+                            <div class="new-select-item">
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox2" checked>
+                                    <label for="checkbox2">Գրենական պիտույքներ</label>
+                                </div>
+                            </div>
+                            <div class="new-select-item">
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox3" checked>
+                                    <label for="checkbox3">Շինարարություն</label>
+                                </div>
+                            </div>
+                            <div class="new-select-item">
+
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox4">
+                                    <label for="checkbox4">Գրենական պիտույքներ 1</label>
+                                </div>
+                            </div>
+                            <div class="new-select-item">
+
+                                <div class="input-checkbox">
+                                    <input type="checkbox" id="checkbox5">
+                                    <label for="checkbox5">Շինարարություն 1</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -218,7 +288,7 @@
     </div>
 </section>
 
-<section class="about-us">
+<section class="about-us" id="about-us">
     <div class="wrapper">
         <div class="about-us__inner">
             <div class="about-us__left">
@@ -298,7 +368,7 @@
     </div>
 </section>
 
-<section class="news">
+<section class="news" id="news">
     <div class="wrapper">
         <h2 class="title">Հետաքրքիր նյութեր</h2>
         <div class="news-slider slider">
@@ -431,11 +501,11 @@
         <div class="close"></div>
         <h2 class="sub-title">Մուտք անձնական էջ</h2>
         <form action="#" class="modal-form">
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="email" name="email" placeholder="Գրեք էլ-հասցեն">
                 <label for="email">Էլ-հասցե</label>
             </div>
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="password" name="password" placeholder="Գրեք գաղտնաբառը">
                 <label for="password">Գաղտնաբառ </label>
             </div>
@@ -455,12 +525,13 @@
 <div id="modal_remove" class="modal">
     <div class="modal__container">
         <div class="close"></div>
-        <h2 class="sub-title">Մուտք անձնական  էջ</h2>
+        <h2 class="sub-title">Մուտք անձնական էջ</h2>
         <form action="#" class="modal-form">
             <div class="description">
-                Եթե մոռացել եք Ձեր գաղտնաբառը, ապա մուտքագրեք Ձեր էլ. փոստի հասցեն և սեղմեք «Վերականգնել»: Դրանից հետո կստանաք նամակ, որում ներառված հղումը սեղմելով կարող եք շարունակել գաղտնաբառի վերականգնումը
+                Եթե մոռացել եք Ձեր գաղտնաբառը, ապա մուտքագրեք Ձեր էլ. փոստի հասցեն և սեղմեք «Վերականգնել»: Դրանից հետո
+                կստանաք նամակ, որում ներառված հղումը սեղմելով կարող եք շարունակել գաղտնաբառի վերականգնումը
             </div>
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="email2" name="email" placeholder="Գրեք էլ-հասցեն">
                 <label for="email2">Էլ-հասցե</label>
             </div>
@@ -468,16 +539,17 @@
         </form>
     </div>
 </div>
+
 <div id="new_password" class="modal">
     <div class="modal__container">
         <div class="close"></div>
         <h2 class="sub-title">Նոր գաղտնաբառ</h2>
         <form action="#" class="modal-form">
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="password3" name="password" placeholder="Գրեք գաղտնաբառը">
                 <label for="password3">Գաղտնաբառ </label>
             </div>
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="password4" name="password1" placeholder="Գրեք գաղտնաբառը">
                 <label for="password4">Կրկնեք գաղտնաբառը </label>
             </div>
@@ -491,26 +563,27 @@
         <div class="close"></div>
         <h2 class="sub-title">Գրանցվել</h2>
         <form action="#" class="modal-form">
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="email1" name="email" placeholder="Գրեք էլ-հասցեն">
                 <label for="email1">Էլ-հասցե</label>
             </div>
-            <div class="input-group input-group-active input-group-now">
-                <input type="text" id="phone" name="phone" placeholder="+374 __ __ __ __">
+            <div class="input-group">
+                <input type="text" id="phone" class="phone-mask" name="phone" placeholder="+374 __ __ __ __">
                 <label for="phone">Հեռախոսահամար </label>
             </div>
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="password1" name="password" placeholder="Գրեք գաղտնաբառը">
                 <label for="password1">Գաղտնաբառ </label>
             </div>
-            <div class="input-group input-group-active input-group-now">
+            <div class="input-group">
                 <input type="text" id="password2" name="password1" placeholder="Գրեք գաղտնաբառը">
                 <label for="password2">Կրկնեք գաղտնաբառը </label>
             </div>
             <div class="modal-form__more">
                 <div class="input-checkbox">
                     <input type="checkbox" id="checkbox1" name="checkbox" checked>
-                    <label for="checkbox1"> Ես համաձայն եմ  օգտատիրոջ <span>տվյալների մշակման քաղաքականության</span> հետ: </label>
+                    <label for="checkbox1"> Ես համաձայն եմ օգտատիրոջ <span>տվյալների մշակման քաղաքականության</span> հետ:
+                    </label>
                 </div>
             </div>
             <button class="btn">Գրանցվել</button>
@@ -522,6 +595,7 @@
 <script src="assets/js/vendor/slick.min.js"></script>
 <script src="assets/js/vendor/jquery.canvasjs.min.js"></script>
 <script src="assets/js/vendor/jquery.formstyler.min.js"></script>
+<script src="assets/js/vendor/jquery.mask.min.js"></script>
 <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
 <script src="assets/js/main.js"></script>
 </body>
